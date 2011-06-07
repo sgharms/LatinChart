@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+require 'latinverb'
+require 'getoptlong'
+
+$:.push File.expand_path("../../lib", __FILE__)
+require 'latinchart'
+
+def print_help
+  puts <<EOH
+
+Welcome to LatinChart.  This is a command-line tool that will print out a
+chart-based example of one of each of the verbal paradigms in classical Latin.
+
+You select which paradigm to use by providing the -p option.  The possible values are:
+
+ * 1
+ * 2
+ * 3
+ * 4
+ * 3io
+
+You will probably want to pass this output to a pager like more or less.
+
+EOH
+end
+
+opts = GetoptLong.new(
+  [ '--help', '-h', GetoptLong::NO_ARGUMENT ],
+  [ '--paradigm', '-p', GetoptLong::REQUIRED_ARGUMENT ]
+)
+
+opts.each do |opt, arg| 
+  case opt
+   when '--help'
+     print_help
+   when '--paradigm'
+     unless Latinchart::MAPPING.keys.any?{|j| j == arg}
+       print_help
+       exit 
+     end
+     puts Latinchart::MAPPING[arg].chart
+  end
+end
+
+
