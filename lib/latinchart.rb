@@ -1,0 +1,3 @@
+module Latinchart
+  # Your code goes here...
+end
