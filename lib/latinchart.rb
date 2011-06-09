@@ -7,8 +7,4 @@ module Latinchart
    "4"   => Linguistics::Latin::Verb::LatinVerb.new(%q(capiō capere cēpī   captum)), 
    "3io" => Linguistics::Latin::Verb::LatinVerb.new(%q(audiō audīre audīvī auditum))   
   }
-
-  def self.razzle
-    puts 'you have been razzled'
-  end
 end
