@@ -39,7 +39,16 @@ opts.each do |opt, arg|
        exit 
      end
      puts Latinchart::MAPPING[arg].chart
+   else
+     print_help
   end
 end
 
+if opts.each.nil?
+  if  ARGV.length == 0 
+    print_help
+  else
+    puts Latinchart::MAPPING[ARGV[0]].chart if Latinchart::MAPPING.keys.any?{|j| j == ARGV[0]}
+  end
+end
 
