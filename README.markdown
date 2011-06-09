@@ -9,4 +9,4 @@ conjugations and forms of a Latin Verb.
 
 ## AUTHOR
 
-Steven G. harms
+Steven G. Harms
