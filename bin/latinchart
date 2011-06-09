@@ -38,7 +38,7 @@ opts.each do |opt, arg|
        print_help
        exit 
      end
-     puts Latinchart::MAPPING[arg].chart
+     Latinchart::MAPPING[arg].chart
    else
      print_help
   end
