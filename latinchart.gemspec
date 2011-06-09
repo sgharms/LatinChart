@@ -4,7 +4,7 @@ require "latinchart/version"
 
 Gem::Specification.new do |s|
   s.name        = "latinchart"
-  s.version     = Linguistics::Latin::Util::LatinIRB::VERSION
+  s.version     = Latinchart::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Steven G. Harms"]
   s.email       = ["steven.harms@gmail.com"]
